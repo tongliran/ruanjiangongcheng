@@ -10,15 +10,91 @@
 　　6、单元测试提高了效率——你不再需要恼人的手工测试，而且代码变动后，你只需要开启单元测试并且查看红/绿栏即可。  
 　　7、还有很重要的一点是：单元测试可以作为DOCUMENTATION(无论是辅助的还是主要的)。
 ## 2.请大家自行查找冒泡排序算法的原理，并用Java语言实现，并根据测试用例对算法编写单元测试。并说明你使用了哪些测试用例？
-   代码：  
-   定义一个数组a[10],一个整数m  
-   1.int i=0;While(i<10){int j=0;  
-   2.While(j<10-i){  
-   3.If(a[j]<a[j+1]){  
-   4.m=a[j];a[j]=a[j+1];a[j+1]=m;}  
-   5.j++;}  
-   6.i++;}  
-   7.System.out.println(a[10]);  
-   流程图：
+ 
+ **代码：**  
+ (''')  
+ 
+ import org.junit.Test;
+ 
+ public class t {
+ 
+	//语句覆盖
+	@Test
+	public void test1() {
+		int[] arr= {4,3,2,1};
+		test t=new test();
+		t.BubbleSort(arr);
+	}
+	
+	//判定覆盖
+	@Test
+	public void test2() {
+		int[] arr= {1,2,3,4};
+		test t=new test();
+		t.BubbleSort(arr);
+	}
+	@Test
+	public void test3() {
+		int[] arr= {4,3,2,1};
+		test t=new test();
+		t.BubbleSort(arr);
+	}
+	
+	//条件覆盖
+	@Test
+	public void test4() {
+		int[] arr= {1,2,3,4};
+		test t=new test();
+		t.BubbleSort(arr);
+	}
+	@Test
+	public void test5() {
+		int[] arr= {4,3,2,1};
+		test t=new test();
+		t.BubbleSort(arr);
+	}
+	
+	//路径覆盖
+	@Test
+	public void test6() {
+		int[] arr= {1,2,3,4};
+		test t=new test();
+		t.BubbleSort(arr);
+	}
+	@Test
+	public void test7() {
+		int[] arr= {4,3,2,1};
+		test t=new test();
+		t.BubbleSort(arr);
+	}
+	
+}
+
+
+class test {
+
+	public void BubbleSort(int[]arr) {
+		
+		for(int i=0;i<arr.length-1;i++) {
+			for(int j=0;j<arr.length-1;j++) {
+				if(arr[j]>arr[j+1]) {
+					int temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+			
+		
+		for(int i1=0;i1<arr.length;i1++)
+				System.out.print(arr[i1]+" ");
+		System.out.println();
+		}
+	}
+	
+}
+
+   (''')
+  
+   **流程图：**
    
   

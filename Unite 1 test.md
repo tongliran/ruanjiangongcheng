@@ -97,7 +97,7 @@ class test {
   
    **流程图：**  
    
-  ![冒泡排序流程图]("https://github.com/tongliran/phoato/blob/master/冒泡排序流程图.png")  
+  ![冒泡排序流程图](https://github.com/tongliran/phoato/blob/master/冒泡排序流程图.png)  
   
   **测试用例**  
   用例编号|输入|输出|用例说明

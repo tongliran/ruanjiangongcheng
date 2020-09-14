@@ -1,5 +1,5 @@
 # 单元测试
-  时间：2020/09/13
+  时间：2020/09/14
 ----
 ## 1.作为软件开发人员，我们为什么要写单元测试？
    1、单元测试记录软件系统内部和外部的结构;  
@@ -76,7 +76,7 @@ class test {
 	public void BubbleSort(int[]arr) {
 		
 		for(int i=0;i<arr.length-1;i++) {
-			for(int j=0;j<arr.length-1;j++) {
+			for(int j=0;j<arr.length-1-i;j++) {
 				if(arr[j]>arr[j+1]) {
 					int temp=arr[j];
 					arr[j]=arr[j+1];
@@ -96,5 +96,31 @@ class test {
    (''')
   
    **流程图：**
+   
+   '''flow
+   
+   a=>start: 开始  
+   b=>operation: int i=0 
+   c=>condition: i<arr.length-1
+   d=>operation: int j=0
+   e=>condition: j<arr.length-1-i
+   f=>condition: arr[j]>arr[j+1]  
+   g=>operation: int temp=arr[j];  arr[j]=arr[j+1];  arr[j+1]=temp;  
+   h=>operation: j++  
+   i=>operation:i++  
+   j=>end: 结束    
+   a->b->c->d->e->f->g->h->i->j  
+   b(true)->d  
+   e(true)->f  
+   f(true)->g  
+   f(false)->h  
+   e(false)->i  
+   c(false)->j  
+   
+   &'''  
+   
+   
+   
+   
    
   
